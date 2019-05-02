@@ -3,7 +3,7 @@ package org.sonatype.mavenbook.web;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
-
+//this is a comment
 public class SimpleServlet extends HttpServlet {
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)

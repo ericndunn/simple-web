@@ -1,22 +1,19 @@
 pipeline {
-    agent any
-    //tools { 
-        //maven 'maven' 
-        //jdk 'jdk8' 
-    //}
+agent { label 'MASTER' }
     stages {
         stage ('Initialize') {
             steps {
-                sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                ''' 
+                sh '''#!/bin/bash
+
+                    echo "Hello from bash"
+                    echo "Who do I $SHELL"
+                '''
             }
         }
 
         stage ('Build') {
             steps {
-                sh '/usr/local/bin/mvn install' 
+                sh '/usr/local/maven/bin/mvn install' 
             }
         }
     }

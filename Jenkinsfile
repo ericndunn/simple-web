@@ -1,5 +1,5 @@
 pipeline {
-agent { label 'MASTER' }
+agent { label 'rhel7' }
     stages {
         stage ('Initialize') {
             steps {
